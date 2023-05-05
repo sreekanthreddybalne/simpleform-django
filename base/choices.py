@@ -1,0 +1,264 @@
+from django.utils.translation import gettext as _
+
+GENDER_MALE ="male"
+GENDER_FEMALE = "female"
+GENDER_OTHER = "other"
+
+
+GENDER = (
+    (GENDER_MALE, _("male")),
+    (GENDER_FEMALE, _("female")),
+    (GENDER_OTHER, _("other"))
+)
+
+ROLE_ADMIN = "admin"
+ROLE_MARKETING_MANAGER = "marketing manager"
+ROLE_ADVISOR_MANAGER = "advisor manager"
+ROLE_ADVISOR = "advisor"
+ROLE_PROSPECT = "prospect"
+
+ROLE = (
+    (ROLE_ADMIN, _("admin")),
+    (ROLE_MARKETING_MANAGER, _("marketing manager")),
+    (ROLE_ADVISOR_MANAGER, _("advisor manager")),
+    (ROLE_ADVISOR, _("advisor")),
+    (ROLE_PROSPECT, _("prospect")),
+)
+
+CHAT_ALLOWED_ROLES = [ROLE_ADMIN, ROLE_MARKETING_MANAGER, ROLE_ADVISOR_MANAGER, ROLE_ADVISOR]
+
+
+PROSPECT_TYPE_FRESH = "fresh"
+PROSPECT_TYPE_QUALIFIED = "qualified"
+PROSPECT_TYPE_NOT_QUALIFIED = "not qualified"
+
+PROSPECT_TYPE = (
+    (PROSPECT_TYPE_FRESH, _("fresh")),
+    (PROSPECT_TYPE_QUALIFIED, _("qualified")),
+    (PROSPECT_TYPE_NOT_QUALIFIED, _("not qualified")),
+)
+
+PROSPECT_EDUCATION_COMPLETED_COLLEGE = 1
+PROSPECT_EDUCATION_COMPLETED_HIGH_SCHOOL = 2
+PROSPECT_EDUCATION_COMPLETED_GRADUATE_SCHOOL = 3
+PROSPECT_EDUCATION_ATTENDED_VOCATIONAL_TECHNICAL = 4
+
+PROSPECT_GENDER = (
+    (PROSPECT_EDUCATION_COMPLETED_COLLEGE, _("Completed College")),
+    (PROSPECT_EDUCATION_COMPLETED_HIGH_SCHOOL, _("Completed High School")),
+    (PROSPECT_EDUCATION_COMPLETED_GRADUATE_SCHOOL, _("Completed Graduate School")),
+    (PROSPECT_EDUCATION_ATTENDED_VOCATIONAL_TECHNICAL, _("Attended Vocational/Technical")),
+)
+
+PROSPECT_ACTIVITY_TYPE_CREATED = "created"
+PROSPECT_ACTIVITY_TYPE_CAMPAIGN_ASSIGNED = "campaign_assigned"
+PROSPECT_ACTIVITY_TYPE_RESPONSE_RECEIVED = "response_received"
+PROSPECT_ACTIVITY_TYPE_QUALIFIED = "qualified"
+PROSPECT_ACTIVITY_TYPE_DISQUALIFIED = "disqualified"
+PROSPECT_ACTIVITY_TYPE_SENT_TO_ADVISOR_MANAGER = "sent_to_advisor_manager"
+PROSPECT_ACTIVITY_TYPE_SENT_TO_ADVISOR = "sent_to_advisor"
+PROSPECT_ACTIVITY_TYPE_RUNNING_TASKS = "running_tasks"
+PROSPECT_ACTIVITY_TYPE_TASKS_COMPLETED = "tasks_completed"
+
+PROSPECT_ACTIVITY_TYPE = (
+    (PROSPECT_ACTIVITY_TYPE_CREATED, _("created")),
+    (PROSPECT_ACTIVITY_TYPE_CAMPAIGN_ASSIGNED, _("qualified")),
+    (PROSPECT_ACTIVITY_TYPE_RESPONSE_RECEIVED, _("response_received")),
+    (PROSPECT_ACTIVITY_TYPE_QUALIFIED, _("qualified")),
+    (PROSPECT_ACTIVITY_TYPE_DISQUALIFIED, _("disqualified")),
+    (PROSPECT_ACTIVITY_TYPE_SENT_TO_ADVISOR_MANAGER, _("sent_to_advisor manager")),
+    (PROSPECT_ACTIVITY_TYPE_SENT_TO_ADVISOR, _("sent_to_advisor")),
+    (PROSPECT_ACTIVITY_TYPE_RUNNING_TASKS, _("running_tasks")),
+    (PROSPECT_ACTIVITY_TYPE_TASKS_COMPLETED, _("tasks_completed")),
+)
+
+
+MARITAL_STATUS_SINGLE = "single"
+MARITAL_STATUS_MARRIED = "married"
+MARITAL_STATUS_INFERRED_MARRIAGE = "inferred married"
+MARITAL_STATUS_INFERRED_SINGLE = "inferred single"
+
+MARITAL_STATUS = (
+    (MARITAL_STATUS_SINGLE, _("single")),
+    (MARITAL_STATUS_MARRIED, _("married")),
+    (MARITAL_STATUS_INFERRED_MARRIAGE, _("inferred married")),
+    (MARITAL_STATUS_INFERRED_SINGLE, _("inferred single")),
+)
+
+LIFE_STYLE_SHOPPING = "shopping"
+LIFE_STYLE_ENTERTAINMENT = "entertainment"
+LIFE_STYLE_HOLIDAYS = "holidays"
+LIFE_STYLE_WORKHOLIC = "workholic"
+LIFE_STYLE_VACATION = "vacation"
+
+LIFE_STYLE = (
+    (LIFE_STYLE_SHOPPING, _("shopping")),
+    (LIFE_STYLE_ENTERTAINMENT, _("entertainment")),
+    (LIFE_STYLE_HOLIDAYS, _("holidays")),
+    (LIFE_STYLE_WORKHOLIC, _("workholic")),
+    (LIFE_STYLE_VACATION, _("vacation")),
+)
+
+
+LIFE_STAGE_SINGLE = "single"
+LIFE_STAGE_INDEPENDENT_AND_WORKING = "independent and working"
+LIFE_STAGE_PARENT = "parent"
+LIFE_STAGE_EMPTY_NESTER = "empty nester"
+
+LIFE_STAGE = (
+    (LIFE_STAGE_SINGLE, _("Married")),
+    (LIFE_STAGE_INDEPENDENT_AND_WORKING, _("independent and working")),
+    (LIFE_STAGE_PARENT, _("parent")),
+    (LIFE_STAGE_EMPTY_NESTER, _("empty nester")),
+)
+
+LIFE_EVENT_MARRIAGE="getting married"
+LIFE_EVENT_BABY = "having/had a baby"
+
+LIFE_EVENT = (
+    (LIFE_EVENT_MARRIAGE, _("getting married")),
+    (LIFE_EVENT_BABY, _("having/had a baby")),
+)
+
+
+TASK_STATUS_CREATED = 1
+TASK_STATUS_SCORED = 2
+TASK_STATUS_QUALIFIED = 3
+TASK_STATUS_NOT_QUALIFIED = 4
+TASK_STATUS_SENT_TO_ADVISOR_MANAGER = 5
+TASK_STATUS_SENT_TO_ADVISOR = 6
+TASK_STATUS_RUNNING_TASKS = 7
+TASK_STATUS_REJECTED = 8
+TASK_STATUS_COMPLETED = 9
+
+TASK_STATUS = (
+    (TASK_STATUS_CREATED, _("created")),
+    (TASK_STATUS_SCORED, _("scored")),
+    (TASK_STATUS_QUALIFIED, _("qualified")),
+    (TASK_STATUS_NOT_QUALIFIED, _("not qualified")),
+    (TASK_STATUS_SENT_TO_ADVISOR_MANAGER, _("advisor manager")),
+    (TASK_STATUS_SENT_TO_ADVISOR, _("advisor")),
+    (TASK_STATUS_RUNNING_TASKS, _("running tasks")),
+    (TASK_STATUS_REJECTED, _("rejected")),
+    (TASK_STATUS_COMPLETED, _("completed")),
+)
+
+QUALIFICATION_STATUS_NONE = 0
+QUALIFICATION_STATUS_QUALIFIED = 1
+QUALIFICATION_STATUS_NOT_QUALIFIED = 2
+QUALIFICATION_STATUS_NEXT_CYCLE = 3
+
+QUALIFICATION_STATUS = (
+    (QUALIFICATION_STATUS_NONE, _("none")),
+    (QUALIFICATION_STATUS_QUALIFIED, _("qualified")),
+    (QUALIFICATION_STATUS_NOT_QUALIFIED, _("not qualified")),
+    (QUALIFICATION_STATUS_NEXT_CYCLE, _("next cycle")),
+)
+
+SALES_PLAN_STATUS_CREATED = _("created")
+SALES_PLAN_STATUS_COMPLETED = _("completed")
+
+SALES_PLAN_STATUS = (
+    (SALES_PLAN_STATUS_CREATED, SALES_PLAN_STATUS_CREATED),
+    (SALES_PLAN_STATUS_COMPLETED, SALES_PLAN_STATUS_COMPLETED),
+)
+
+SALES_PLAN_TASK_STATUS_CREATED = _("created")
+SALES_PLAN_TASK_STATUS_PENDING = _("pending")
+SALES_PLAN_TASK_STATUS_HOLD = _("hold")
+SALES_PLAN_TASK_STATUS_COMPLETED = _("completed")
+
+SALES_PLAN_TASK_STATUS = (
+    (SALES_PLAN_TASK_STATUS_CREATED, SALES_PLAN_TASK_STATUS_CREATED),
+    (SALES_PLAN_TASK_STATUS_PENDING, SALES_PLAN_TASK_STATUS_PENDING),
+    (SALES_PLAN_TASK_STATUS_HOLD, SALES_PLAN_TASK_STATUS_HOLD),
+    (SALES_PLAN_TASK_STATUS_COMPLETED, SALES_PLAN_TASK_STATUS_COMPLETED),
+)
+
+ACCESS_CHOICES = (
+    (1, _("super_admin")),
+    (2, _("admin")),
+    (3, _("accountant")),
+    (4, _("consultant"))
+)
+
+
+
+ROOM_TYPE_GROUP = "group"
+ROOM_TYPE_USER = "user"
+
+ROOM_TYPE = (
+    (ROOM_TYPE_GROUP, _("group")),
+    (ROOM_TYPE_USER, _("user")),
+)
+
+
+MESSAGE_STATUS_SENT = "Sent"
+MESSAGE_STATUS_SEEN = "Seen"
+
+MESSAGE_STATUS = (
+    (MESSAGE_STATUS_SENT, _("Sent")),
+    (MESSAGE_STATUS_SEEN, _("Seen")),
+)
+
+NOTIFICATION_STATUS_SENT = "sent"
+NOTIFICATION_STATUS_SEEN = "seen"
+NOTIFICATION_STATUS_READ = "read"
+
+NOTIFICATION_STATUS = (
+    (NOTIFICATION_STATUS_SENT, _("sent")),
+    (NOTIFICATION_STATUS_SEEN, _("seen")),
+    (NOTIFICATION_STATUS_READ, _("read")),
+)
+
+
+NOTIFICATION_TYPE_MESSAGE = "message"
+NOTIFICATION_TYPE_ADVISOR_MANAGER_TASK = "advisor_manager_task"
+NOTIFICATION_TYPE_ADVISOR_TASK = "advisor_task"
+
+NOTIFICATION_TYPE = (
+    (NOTIFICATION_TYPE_MESSAGE, _("message")),
+    (NOTIFICATION_TYPE_ADVISOR_MANAGER_TASK, _("advisor_manager_task")),
+    (NOTIFICATION_TYPE_ADVISOR_TASK, _("advisor_task")),
+)
+
+
+
+CAMPAIGN_TYPE_EMAIL = "Email"
+CAMPAIGN_TYPE_SMS = "SMS"
+
+CAMPAIGN_TYPE = (
+    (CAMPAIGN_TYPE_EMAIL, _("Email")),
+    (CAMPAIGN_TYPE_SMS, _("SMS"))
+)
+
+
+TODO_STATUS_COMPLETED = "completed"
+TODO_STATUS_UPCOMING = "upcoming"
+
+TODO_STATUS = (
+    (TODO_STATUS_COMPLETED, _("completed")),
+    (TODO_STATUS_UPCOMING, _("upcoming")),
+)
+
+
+
+SUPER_ADMIN =1
+ACCESS_CHOICES = (
+    (1, _("super_admin")),
+    (2, _("admin")),
+    (3, _("accountant")),
+    (4, _("consultant"))
+)
+REQUEST_CHOICES = (
+    (1, _("not viewed")),
+    (2, _("viewed")),
+    (2, _("approved")),
+    (2, _("rejected"))
+)
+DESCRIPTION_TYPES = (
+    (0, _("")),
+    (1, _("notice")),
+    (2, _("alert")),
+    (3, _("rejected"))
+)
